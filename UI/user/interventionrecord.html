@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> iReporter | Intervention</title>
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+    </head>
+
+    <body>
+        <div class="header">
+                <div class="headerleft">
+                        <h1 id= "title">iReporter - <i>intervention record </i></h1>
+                    </div>
+        
+                    <div class="headerright">
+                        <button style="margin-left: 80%; width:60px;"><a href="./signinPage.html">logout</a></button>
+                    </div>
+        </div>
+
+        <div class="sidebar">
+            <img src="../img/profilepic.jpg" alt="Profile image" height="150" width="250">
+            <ul>
+                <li><a href="./signinPage.html">Home</a></li>
+                <li><a href="./userprofile.html">User Profile</a></li>
+                <li>Workspace 
+                    <ul>
+                        <li><a href="./redflag.html" >Create red flag</a></li>
+                        <li><a href="./redflags.html" count="4">Red flags</a></li>
+                        <li><a href="./interventionrecord.html">Create intervention</a></li>
+                        <li><a href="./interventions.html" count="4">Interventions</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            
+            </div>
+        <div class="middlesection">
+
+            <h2>Add details of the intervention below.</h2>
+            <div id="middlesectioncontent">
+
+                <p><strong>Name</strong></p>
+                <input type="text" name= "interventionname" placeholder="Enter the name of the intervention">
+
+                <p><strong>Description</strong></p>
+                <input type="text" name= "email" placeholder="Add a description to the intervention"><br><br>
+
+                <strong>Insert Image: </strong>
+                <input type="file" name= "image" accept="image/*"><br><br>
+
+                <strong>Add Video: </strong>
+                <input type="file" name= "video" accept="video/*">
+                
+                <p>Click button below to add Geolocation coordinates</p>
+                <button onclick="mylocation()">Geolocation</button><br><br>
+                <textarea id="coordinates"></textarea><br><br>
+
+                <button>Submit</button>
+
+            </div>
+        </div>
+
+        <script>
+                var x = document.getElementById("coordinates");
+                
+                function mylocation() {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(displayposition);
+                    } else { 
+                        x.innerHTML = "Geolocation not supported.";
+                    }
+                }
+                
+                function displayposition(position) {
+                    x.innerHTML = "Lat coordinates: " + position.coords.latitude + 
+                    "   Long coordinates: " + position.coords.longitude;
+                }
+                </script>
+    </body>
+</html>
