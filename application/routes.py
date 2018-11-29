@@ -106,3 +106,14 @@ class Views:
                         "message": "Updated red-flag record's comment."
                     }), 200
             return jsonify({"message": "Red-flag not updated"}), 400
+
+        @app.route('/api/v1/red-flags/<int:red_flag_id>', methods=['DELETE'])
+        def deleteredflag(red_flag_id):
+            for i, redflag in enumerate(redflags):
+                if redflag["id"] == red_flag_id:
+                    redflags.pop(i)
+                    return jsonify({
+                        "data": redflag["id"],
+                        "message": "Red-flag record deleted"
+                    }), 200
+            return jsonify({"message": "Red-flag record not deleted"}), 400
