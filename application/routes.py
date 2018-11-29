@@ -81,3 +81,28 @@ class Views:
                 "data": incident_dict["id"],
                 "message": "Created red-flag record"
             }), 200
+
+        @app.route('/api/v1/red-flags/<int:red_flag_id>/location', methods=['PATCH'])
+        def editlocation(red_flag_id):
+            data_request = request.get_json()
+            for redflag in redflags:
+                if redflag["id"] == red_flag_id:
+                    redflag["location"] = data_request.get("location")
+                    return jsonify({
+                        "data": red_flag_id,
+                        "message": "Updated red-flag record's location",
+                        "status": 200
+                    }), 200
+            return jsonify({"message": "Red-flag record's location not updated"}), 400
+
+        @app.route('/api/v1/red-flags/<int:red_flag_id>/comment', methods=['PATCH'])
+        def editcomment(red_flag_id):
+            data_request = request.get_json()
+            for redflag in redflags:
+                if redflag["id"] == red_flag_id:
+                    redflag['comment'] = data_request.get("comment")
+                    return jsonify({
+                        "data": red_flag_id,
+                        "message": "Updated red-flag record's comment."
+                    }), 200
+            return jsonify({"message": "Red-flag not updated"}), 400
