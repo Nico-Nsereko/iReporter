@@ -33,3 +33,10 @@ class Views:
             if len(redflags)>0:
                 return jsonify({"data": redflags }), 200
             return jsonify({"message": "No red flags detected"}), 400
+
+        @app.route('/api/v1/red-flags/<int:red_flag_id>', methods=['GET'])
+        def getredflag(red_flag_id):
+            for redflag in redflags:
+                if redflag["id"] == red_flag_id:
+                    return jsonify({"data": redflags[red_flag_id]}), 200
+            return jsonify({"message": "Red-flag does not exist."}), 400
