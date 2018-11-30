@@ -1,5 +1,5 @@
 # iReporter
-[![Build Status](https://travis-ci.org/Nico-Nsereko/iReporter.svg?branch=challenge2)](https://travis-ci.org/Nico-Nsereko/iReporter)[![Coverage Status](https://coveralls.io/repos/github/Nico-Nsereko/iReporter/badge.svg?branch=master)](https://coveralls.io/github/Nico-Nsereko/iReporter?branch=challenge2)
+[![Build Status](https://travis-ci.org/Nico-Nsereko/iReporter.svg?branch=challenge2)](https://travis-ci.org/Nico-Nsereko/iReporter)[![Coverage Status](https://coveralls.io/repos/github/Nico-Nsereko/iReporter/badge.svg?branch=challenge2)](https://coveralls.io/github/Nico-Nsereko/iReporter?branch=challenge2)
 ## Description
 IReporter is an application aiming at helping the users bring any form of corruption to the notice of appropriate authorities and the general public. Users can also report on things that needs government intervention.
 
