@@ -24,7 +24,7 @@ class Views:
 
     @staticmethod
     def get_views(app):
-        @app.route('/')
+        @app.route('/api/v1')
         def home():
             return jsonify({"message":"Welcome to iReporter"}), 200
 
