@@ -9,7 +9,7 @@ class TestCase:
         return test_client
 
     def test_home(self, client):
-        res = client.get('/')
+        res = client.get('/api/v1')
         assert res.status_code == 200
         assert b"Welcome to iReporter" in res.data
 
