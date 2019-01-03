@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iReporter | Admin</title>
+        <meta name='viewpoint' content="width=device-width, initial-scale=1">
+	    <link rel='stylesheet' type='text/css' href='../css/styles.css'>
+    </head>
+
+    <body>
+        <div class="topnav">
+            <p>iReporter</p>
+            <a class="active" href="../index.html">Home</a>
+            <div class="topnav-right">
+                <a href="./signin.html">User Login</a>
+            </div>   
+        </div>
+        <div class="profile_wrapper">
+            <div class="profile_details">
+                <div>
+                    <h2 id="username">Admin</h2>
+                    <img src="../img/team.jpg" width="90%" height="200" alt="User image" style="border-radius:100%">
+                </div>
+
+                <div class="aside_links">    
+                    <a>Resolved incidents<strong>12</strong></a>
+                    <a>Incidents Under Investigation<strong>12</strong></a>
+                    <a>Red-flag Drafts<strong>12</strong></a>
+                    <a>Rejected<strong>12</strong></a>
+                    <a href="../index.html">Log out</a>
+                </div>
+
+            </div>
+
+            <div class="incident_details" style="width:100%; padding: 0; ">
+                <div class="myTable" >
+                    <table>
+                        <tr>
+                            <th>User name</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Location</th>
+                            <th>Image</th>
+                            <th>Video</th>
+                        </tr> 
+                        
+                        <tr>
+                            <td>Nsereko Nico</td>
+                            <td>Corruption at Kalerwe PS</td>
+                            <td>Money handed over to officer by drunckard drive</td>
+                            <td>
+                                <select>
+                                    <option value="Resolved">Resolved</option>
+                                    <option value="Rejected">Rejected</option>
+                                    <option value="Investigation">Under Investigation</option>
+                                </select>
+                            </td>
+                            <td>12/12/2018</td>
+                            <td>Lat 12.3 long 33.5</td>
+                            <td><img src="../img/corruption2.jpg" width="150" height="150" alt="User image"></td>
+                            <td>
+                                <video width="200" height="150" alt="User image" controls>
+                                    <source src="vid.mp4">
+                                        Your browser does not support the video tag.
+                                </video>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Nsereko Nico</td>
+                            <td>Bad road that needs renovation</td>
+                            <td>Always affected during the rainy season and transport is hard</td>
+                            <td>
+                                <select>
+                                    <option value="Resolved">Resolved</option>
+                                    <option value="Rejected">Rejected</option>
+                                    <option value="Investigation">Under Investigation</option>
+                                </select>
+                            </td>
+                            <td>12/12/2018</td>
+                            <td>Lat 12.3 long 33.5</td>
+                            <td><img src="../img/intervention2.jpg" width="150" height="150" alt="User image"></td>
+                            <td>
+                                <video width="200" height="150" alt="User image" controls>
+                                    <source src="vid.mp4">
+                                        Your browser does not support the video tag.
+                                </video>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Nsereko Nico</td>
+                            <td>School needs better infrastructure</td>
+                            <td>Students have no enough and good classrooms to study from </td>
+                            <td>
+                                <select>
+                                    <option value="Resolved">Resolved</option>
+                                    <option value="Rejected">Rejected</option>
+                                    <option value="Investigation">Under Investigation</option>
+                                </select>
+                            </td>
+                            <td>12/12/2018</td>
+                            <td>Lat 12.3 long 33.5</td>
+                            <td><img src="../img/intervention3.jpg" width="150" height="150" alt="User image"></td>
+                            <td>
+                                <video width="200" height="150" alt="User image" controls>
+                                    <source src="vid.mp4">
+                                        Your browser does not support the video tag.
+                                </video>
+                            </td>
+                        </tr>  
+                    </table>
+                    
+                        
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
